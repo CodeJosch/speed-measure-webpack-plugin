@@ -144,9 +144,6 @@ module.exports = class SpeedMeasurePlugin {
           ? fs.appendFileSync
           : fs.writeFileSync;
         writeMethod(this.options.outputTarget, output + "\n");
-        console.log(
-          smpTag() + "Outputted timing info to " + this.options.outputTarget
-        );
       } else {
         const outputFunc = this.options.outputTarget || console.log;
         outputFunc(output);
